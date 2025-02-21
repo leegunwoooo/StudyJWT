@@ -1,20 +1,18 @@
 package com.example.studyjwt.dto;
 
 import com.example.studyjwt.entity.UserEntity;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
+@RequiredArgsConstructor
 public class CustomUserDetails implements UserDetails {
 
     private final UserEntity userEntity;
 
-    public CustomUserDetails(UserEntity userEntity) {
-        this.userEntity = userEntity;
-    }
 
 
     @Override
